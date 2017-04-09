@@ -29,6 +29,12 @@ $(function () {
     transitionDuration: '1s'
   });
 
+  /* Initialisation des vignettes */
+  function init() {
+    $grid.masonry();
+  }
+
+  var timer = setTimeout(init, 5000);
   /* Agrandissement du bloc au clic */
   $('.description').on('click', function() {
 
@@ -41,7 +47,7 @@ $(function () {
       		$gridItem.addClass('double-grid');
     }
 
-    $grid.masonry();
+    init();
 
     });
 
